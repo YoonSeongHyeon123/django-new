@@ -113,16 +113,11 @@
         <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
           지옥에 오신걸 환영?합니다
         </a>
-        <a href="#" class="list-group-item list-group-item-action">[1]대충 인기글이라는 내용</a>
-        <a href="#" class="list-group-item list-group-item-action">[2]대충 인기글이라는 내용</a>
-        <a href="#" class="list-group-item list-group-item-action">[3]대충 인기글이라는 내용</a>
-        <a href="#" class="list-group-item list-group-item-action">[4]대충 인기글이라는 내용</a>
-        <a href="#" class="list-group-item list-group-item-action">[5]대충 인기글이라는 내용</a>
-        <a href="#" class="list-group-item list-group-item-action">[6]대충 인기글이라는 내용</a>
-        <a href="#" class="list-group-item list-group-item-action">[7]대충 인기글이라는 내용</a>
-        <a href="#" class="list-group-item list-group-item-action">[8]대충 인기글이라는 내용</a>
-        <a href="#" class="list-group-item list-group-item-action">[9]대충 인기글이라는 내용</a>
-        <a href="#" class="list-group-item list-group-item-action">[10]대충 인기글이라는 내용</a>
+        {% for blogs in blogs.all %}
+        <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+          [ {{blogs.id}} ] {{blogs.title}} | {{blogs.body}} | {{blogs.pub_date}}
+        </a>
+        {% endfor %}
       </div>      
       
     </section>

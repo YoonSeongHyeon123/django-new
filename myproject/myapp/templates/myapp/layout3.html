@@ -73,12 +73,16 @@
         <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
           공지의 탑
         </a>
-        <a href="#" class="list-group-item list-group-item-action">공지</a>
-        <a href="#" class="list-group-item list-group-item-action">공지</a>
-        <a href="#" class="list-group-item list-group-item-action">공지</a>
+        {% for notices in notices.all %}
+          <a href="#" class="list-group-item list-group-item-action">
+            {{ notices.title }} | {{ notices.pub_date }}
+          </a>
+          {% endfor %}
         <a class="list-group-item list-group-item-action disabled" aria-disabled="true">공지는 추가될 수도 있고 갱신이 될 수도 있습니다</a>
       </div>
     </section>
+    
+
   </body>
   
   <footer>
