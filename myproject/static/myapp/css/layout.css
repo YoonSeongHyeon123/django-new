@@ -1,0 +1,102 @@
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: lightblue;
+  font-family: 'S-CoreDream-3Light';
+}
+
+header {
+  text-align: center;
+  padding: 50px 0 20px;
+}
+
+header h1 {
+  font-family: 'GmarketSansMedium';
+  font-size: 70px;
+}
+
+nav {
+  background-color: rgba(29, 29, 29, 0.5);
+  padding: 10px 0;
+}
+
+nav div div button{
+  width: 100%;
+}
+
+.ysh_con1 {
+  display: flex;
+  width: 100%;
+}
+
+.carousel{
+  width: 100%;
+  height: 500px;
+}
+
+.carousel-inner{
+  height: 500px;
+}
+
+.ysh_con1 div {
+  text-align: center;
+}
+
+.ysh_con2 {
+  display: flex; 
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px 0;
+  height: 600px;
+}
+
+.ysh_con2 div {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card-img-top{
+  height: 300px;
+}
+
+.card-text{
+  height: 100px;
+}
+
+.ysh_con3 {
+  padding: 0 10px;
+}
+
+.ysh_con4 div{
+  margin: 0 auto;
+}
+
+.ysh_con4 div ul{
+  display: inline-flex;
+  margin: 10px auto;
+}
+
+.container div p {
+  font-size: 25px;
+}
+
+.pagenation{
+  text-align: center;
+}
+
+footer {
+  padding: 30px 20px;
+  text-align: center;
+}

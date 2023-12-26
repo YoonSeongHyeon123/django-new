@@ -24,4 +24,5 @@ urlpatterns = [
     path('layout2/',myapp.views.layout2, name='layout2'),
     path('layout3/',myapp.views.layout3, name='layout3'),
     path('layout4/',myapp.views.layout4, name='layout4'),
+    path('layout2/create/', myapp.views.create, name='create'),
 ]
