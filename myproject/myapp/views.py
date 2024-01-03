@@ -3,6 +3,7 @@ from django.utils import timezone
 from .models import Blog
 from .models import notice
 from .models import communicate
+from .forms import CreateForm
 # Create your views here.
 
 def layout(request):
@@ -10,7 +11,15 @@ def layout(request):
 
 def layout2(request):
     communicates = communicate.objects
-    return render(request,'myapp/layout2.html', {'communicates':communicates})
+    if request.method == 'POST':
+        form = CreateForm(request.POST)
+        if form.is_valid():
+            form = form.save(commit=False)
+            form.save()
+            return redirect('layout2')
+    else:
+        form = CreateForm()
+        return render(request, 'myapp/layout2.html', {'form':form, 'communicates':communicates})
 
 def layout3(request):
     notices = notice.objects
@@ -19,11 +28,3 @@ def layout3(request):
 def layout4(request):
     blogs = Blog.objects
     return render(request,'myapp/layout4.html', {'blogs':blogs})
-
-def create(request):
-    communicates = communicate()
-    communicates.title = request.GET['title']
-    communicates.pub_date = timezone.now()
-    communicates.body = request.GET['body']
-    communicates.save()
-    return redirect('layout2')
